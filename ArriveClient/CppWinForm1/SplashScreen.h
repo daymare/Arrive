@@ -1,6 +1,7 @@
 #pragma once
 
 #include "MainView.h"
+#include "TestDialog.h"
 
 namespace ArriveClient {
 
@@ -186,7 +187,9 @@ namespace ArriveClient {
 		this->Hide();
 	}
 	private: System::Void testButton_Click(System::Object^  sender, System::EventArgs^  e) {
-		
+		TestDialog ^dialog = gcnew TestDialog();
+		dialog->StartPosition = FormStartPosition::CenterScreen;
+		dialog->Show();
 	}
 };
 }

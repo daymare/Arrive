@@ -1,11 +1,13 @@
 #pragma once
 
+#include <boost\asio.hpp>
 #include <string>
 #include <msclr\marshal_cppstd.h>
 
 using std::string;
 using msclr::interop::marshal_as;
 using System::String;
+//using boost::asio::ip::udp;
 
 namespace ArriveClient {
 
@@ -139,7 +141,28 @@ namespace ArriveClient {
 		}
 #pragma endregion
 	private: System::Void sendButton_Click(System::Object^  sender, System::EventArgs^  e) {
-		
+		//boost::asio::io_service io_service;
+		//const int max_length = 1021;
+
+		//msclr::interop::marshal_context^ context = gcnew msclr::interop::marshal_context();
+
+		//udp::socket s(io_service, udp::endpoint(udp::v4(), 1776));
+
+		//udp::resolver resolver(io_service);
+		//array<System::String^> ^ioDatas = this->ipBox->Text->Split(L':');
+		//udp::endpoint endpoint = *resolver.resolve({ udp::v4(), context->marshal_as<string>(ioDatas[0]), context->marshal_as<string>(ioDatas[1])});
+
+		//const char * request = context->marshal_as<string>(this->messageBox->Text).c_str();
+		//size_t request_length = std::strlen(request);
+		//s.send_to(boost::asio::buffer(request, request_length), endpoint);
+
+		//char reply[max_length];
+		//udp::endpoint sender_endpoint;
+		//size_t reply_length = s.receive_from(
+		//	boost::asio::buffer(reply, max_length), sender_endpoint);
+
+
+		//this->receiptLabel->Text = gcnew System::String(reply);
 	}
 };
 }
