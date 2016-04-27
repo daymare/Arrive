@@ -2,10 +2,11 @@
 
 #include "StudentRecord.hpp"
 #include <vector>
+#include <algorithm>
 
 using std::vector;
 
-enum class RecordFilter
+enum class RecordSort
 {
 	ASC,
 	DESC,
@@ -20,15 +21,26 @@ class RecordCollection
 public:
 	RecordCollection();
 
-	void setFilter(RecordFilter &filter);
+	void setSort(const RecordSort &sort);
+	void setFilter(string &filter);
 	void addRecord(StudentRecord &sr);
 
-	vector<StudentRecord> getRecords();
+	void getRecords(vector<StudentRecord> * recs);
 
 	void clear();
 
 private:
 	vector<StudentRecord> records;
-	RecordFilter filter;
+	RecordSort sort;
+	string filter;
+
+	void sortRecs();
+
+	static bool sortByIDASC(StudentRecord &s1, StudentRecord &s2);
+	static bool sortByIDDESC(StudentRecord &s1, StudentRecord &s2);
+	static bool sortByNameASC(StudentRecord &s1, StudentRecord &s2);
+	static bool sortByNameDESC(StudentRecord &s1, StudentRecord &s2);
+	static bool sortByDateASC(StudentRecord &s1, StudentRecord &s2);
+	static bool sortByDateDESC(StudentRecord &s1, StudentRecord &s2);
 
 };
