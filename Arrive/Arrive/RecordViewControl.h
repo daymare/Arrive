@@ -31,8 +31,8 @@ using std::endl;
 #define MAX_PACKET_SIZE 1021
 #define SCHEMA_NAME "test_schema"
 #define DATABASE_ADDR "arrivedatabase.cvqftzv8ankt.us-west-2.rds.amazonaws.com"
-#define USER_NAME "Arrive_Admin"
-#define PASSWORD "Arrive_MDS16"
+#define USER_NAME "Client"
+#define PASSWORD "client"
 
 
 namespace ArriveClient {
