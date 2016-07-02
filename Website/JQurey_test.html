@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+
+<script>
+$(document).ready(function()
+{
+  $("button").click(function()
+  {
+    alert("button was pressed!");
+    var clickBtnValue = $(this).val();
+    var ajaxurl = 'ajax_test.php';
+    data = {'action': clickBtnValue};
+    $.post(ajaxurl, data, function (response)
+    {
+      // function handling the data response
+      alert(response);
+      alert("performed some action!");
+    });
+  });
+});
+
+</script>
+
+
+<body>
+<p><button>test_button</button></p>
+</body>
+</html>
