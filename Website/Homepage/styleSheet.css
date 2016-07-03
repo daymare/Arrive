@@ -23,6 +23,11 @@ position: fixed;
 left: 50%;
 transform: translate(-50%, 0%);
 }
+FORM {
+position: fixed;
+left: 55%
+transform: translate(-55%, 0%);
+}
 
 banner {
 position: fixed;

@@ -17,13 +17,15 @@ else
 <?php
 
 // code homepage.
-include 'code_homepage.php';
+include ($_SERVER['DOCUMENT_ROOT']."/Homepage/homepage.php");
+
+/// Testing area ///
 
 // jquery test.
 // include 'JQurey_test.html';
 
 // pdo database test
-include 'pdo_test.php';
+include (dirname(__DIR__).'/Testing/pdo_test.php');
 
 ?>
 

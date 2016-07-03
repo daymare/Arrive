@@ -32,20 +32,30 @@ $(document).ready(function(){
 <centered>
 <div>
 	<form>
-	  Username:<br>
-	  <input type="text" id = "field1" name="username"><br>
-          Password:<br>
-          <input type="text2" id = "field2" name="password"><br>
+            First Name:<br>
+            <input type="text" id = "field1" name="First Name"><br>
+
+            Last Name:<br>
+            <input type="text2" id = "field2" name="Last Name"><br>
+ 
+            Username:<br>
+            <input type="text3" id = "field1" name="username"><br>
+
+            Password:<br>
+            <input type="text4" id = "field2" name="password"><br>
+
+            Confirm Password: <br>
+            <input type="text5" id="field3" name="confirm password"><br>
+
             ID Number: <br>
-         <Input type="text3" id = "field3" name="idnumber"><br>
-         Code:<br>
-	  <Input type="text4" id = "field4" name="code"><br>
+            <input type="text6" id = "field3" name="idnumber"><br>
        	</form>
-        <button onclick="myFunction()">Enter</button>
+        <button onclick="ConfirmSignUp()">Confirm</button>
 </div>
 </centered>
 
 	<script>
+
 	function myFunction() 
 	{
                $.post( 
@@ -55,6 +65,7 @@ $(document).ready(function(){
             alert(json);
        });
 	}
+
 	</script>
 
 <div class="fixed">
