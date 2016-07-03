@@ -18,6 +18,14 @@ $password = $_SERVER['RDS_PASSWORD'];
 echo "Constructing PDO";
 $dbh = new PDO($dsn, $username, $password);
 
+CREATE TABLE Persons
+	(
+	Username varchar(255),
+	Password varchar(255),
+	ID int,
+	Code int
+	);
+
 
   // create database connection variables
 //$host = 'arrivedatabase.cvqftzv8ankt.us-west-2.rds.amazonaws.com:3306';
