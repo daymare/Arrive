@@ -1,77 +1,79 @@
 <head>
-<link rel="stylesheet" type="text/css" href="styleSheet.css">
-<title>Did you attend class today?</title>
+    <link rel="stylesheet" type="text/css" href="styleSheet.css">
+    <title>Did you attend class today?</title>
 
-<style>
-div.fixed {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-</style>
+    <style>
+        div.fixed 
+        {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
 
-$(document).ready(function(){
-    $("button").click(function(){
-       alert($("#text").attr("input"));
-    });
-});
-</script>
+        $(document).ready(function()
+        {
+            $("button").click(function()
+            {
+               alert($("#text").attr("input"));
+            });
+        });
+
+    </script>
 
 </head>
 
 <body>
 
+    <banner>
+        <img src="http://i63.tinypic.com/2znrf9z.jpg" style="max-height: 100%; max-width: 100%;"/>
+    </banner>
 
-<banner>
-<img src="http://i63.tinypic.com/2znrf9z.jpg" style="max-height: 100%; max-width: 100%;"/>
-</banner>
+    <centered>
+        <div>
 
-<centered>
-<div>
-        <!-- sign in stuff -->
-	<form>
-            Username:<br>
-            <input type="text" id = "field1" name="username"><br>
-            Password:<br>
-            <input type="text2" id = "field2" name="password"><br>
-            ID Number: <br>
-            <Input type="text3" id = "field3" name="idnumber"><br>
-            Code:<br>
-            <Input type="text4" id = "field4" name="code"><br>
-       	</form>
-        <button onclick="SignIn()">Sign in</button>
+            <!-- sign in stuff -->
+            <form>
+                Username:<br>
+                <input type="text" id = "field1" name="username"><br>
 
-        <!-- signup page button redirect  -->
-        <FORM METHOD="LINK"ACTION="..\Signup_page\signup_page.php">
-        <INPUT TYPE="submit"VALUE="Sign up">
-        </FORM>
+                Password:<br>
+                <input type="text2" id = "field2" name="password"><br>
 
-</div>
-</centered>
+                ID Number: <br>
+                <Input type="text3" id = "field3" name="idnumber"><br>
 
-	<script>
-	function SignIn() 
-	{
-               $.post( 
-          'example.php'
-       ).success(function(resp){
-            json = $.parseJSON(resp);
-            alert(json);
-       });
-	}
+                Code:<br>
+                <Input type="text4" id = "field4" name="code"><br>
+            </form>
+            
+            <!-- sign in button -->
+            <button onclick="SignIn()">Sign in</button>
 
-        function GotoSignup()
-        {
-            // redirect to sign up page
-        
-        }
-	</script>
+            <!-- signup page button redirect  -->
+            <FORM METHOD="LINK"ACTION="..\Signup_page\signup_page.php">
+                <INPUT TYPE="submit"VALUE="Sign up">
+            </FORM>
 
-<div class="fixed">
-&#xA9; 2016 CougsAttend
-</div>
+        </div>
+    </centered>
+
+            <script>
+                function SignIn() 
+                {
+                    $.post('example.php').success(function(resp)
+                    {
+                        json = $.parseJSON(resp);
+                        alert(json);
+                    });
+                }
+            </script>
+
+    <div class="fixed">
+        &#xA9; 2016 CougsAttend
+    </div>
 
 </body>

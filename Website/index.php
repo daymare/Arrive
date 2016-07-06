@@ -10,27 +10,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 }
 else
 {
-?>
-<!doctype html>
-<html lang="en">
+    ?>
+    <!doctype html>
+    <html lang="en">
 
-<?php
+    <?php
 
-// code homepage.
-include ($_SERVER['DOCUMENT_ROOT']."/Homepage/homepage.php");
+    // code homepage.
+    include ($_SERVER['DOCUMENT_ROOT']."/Homepage/homepage.php");
 
-/// Testing area ///
+    /// Testing area ///
 
-// jquery test.
-// include 'JQurey_test.html';
+    // jquery test.
+    // include 'JQurey_test.html';
 
-// pdo database test
-include (dirname(__DIR__).'/Testing/pdo_test.php');
+    // pdo database test
+    include (dirname(__DIR__).'/Testing/pdo_test.php');
 
-?>
+    ?>
 
 
-</html>
+    </html>
 <? 
 } 
 ?>
