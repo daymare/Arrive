@@ -16,16 +16,10 @@
         $password = $_SERVER['RDS_PASSWORD'];
 
         echo "Constructing PDO || ";
-        $dbh = new PDO($dsn, $username, $password);
+        $databaseConnection = new PDO($dsn, $username, $password);
         echo "created database connection";
 
-        CREATE TABLE Persons
-            (
-                Username varchar(255),
-                Password varchar(255),
-                ID int,
-                Code int
-            );
+        $databaseConnection.query("<SQL Code>");
 
     }
     catch (PDOException $e)
