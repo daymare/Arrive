@@ -17,7 +17,13 @@
         {
             $("button").click(function()
             {
-               alert($("#text").attr("input"));
+                alert($("#text").attr("input"));
+                
+                $.post("<something>.php", <data>, 
+                    function (<parameters>)
+                    {
+                        alert("got a thing!");
+                    }
             });
         });
     </script>
